@@ -61,7 +61,7 @@ bot.on("messageReactionAdd", async (msg, emoji, reactor) => {
     const dmChannel = await propositionMember.user.getDMChannel();
     if (!dmChannel) return;
 
-    const message = `Message provenant du serveur [${msgCatched.channel.guild.name}](https://discord.com/channels/${msgCatched.channel.guild.id}).\n\nBonjour, votre proposition de sport (**${sportName}**) soumise le \`${utils.date()}\` a été acceptée par la communauté! Votre sport se verra donc être disponible pour la communauté sous peu! 
+    const message = `Message en provenance du serveur [${msgCatched.channel.guild.name}](https://discord.com/channels/${msgCatched.channel.guild.id}).\n\nBonjour, votre proposition de sport (**${sportName}**) soumise le \`${utils.date()}\` a été acceptée par la communauté! Votre sport se verra donc être disponible pour la communauté sous peu! 
     Pour l'instant, la catégorie de ce sport ne possède aucun bénévole affecté à elle au moment de l'envoi de ce message. Nous avons donc penser à vous dès la création de celle-ci. Si vous souhaitez gérer la catégorie ce sport sur notre serveur, n'hésitez pas à contacter directement un administrateur en message privé.
     
     Liens pratiques : (ce lien n'est pas dangereux!)
