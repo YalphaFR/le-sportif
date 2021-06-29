@@ -62,11 +62,10 @@ bot.on("messageReactionAdd", async (msg, emoji, reactor) => {
     if (!dmChannel) return;
 
     const message = `Message provenant du serveur [${msgCatched.channel.guild.name}](https://discord.com/channels/${msgCatched.channel.guild.id}).\n\nBonjour, votre proposition de sport (**${sportName}**) soumise le \`${utils.date()}\` a été acceptée par la communauté! Votre sport se verra donc être disponible pour la communauté sous peu! 
-    Pour l'instant, la catégorie de ce sport ne possède aucun bénévole affectée à elle au moment de l'envoi de ce message. Nous avons donc penser à vous dès la création de celle-ci. Si vous souhaitez gérer la catégorie ce sport sur notre serveur, n'hésitez pas à contacter directement un administrateur en message privé.
+    Pour l'instant, la catégorie de ce sport ne possède aucun bénévole affecté à elle au moment de l'envoi de ce message. Nous avons donc penser à vous dès la création de celle-ci. Si vous souhaitez gérer la catégorie ce sport sur notre serveur, n'hésitez pas à contacter directement un administrateur en message privé.
     
-    Liens pratiques : (ces liens ne sont pas dangereux!)
-    [Cliquez pour plus d'informations sur le rôle de bénévole](https://discord.com/channels/848623623254310912/848629633908736020/859404023671947275).
-    [Cliquez pour plus d'informations sur les modalités du rôle bénévole.](https://discord.com/channels/848623623254310912/848629633908736020/859404061447028746)`;
+    Liens pratiques : (ce lien n'est pas dangereux!)
+    [Cliquez ici pour plus d'informations sur le rôle de bénévole](https://discord.com/channels/848623623254310912/848629633908736020/859404023671947275).`;
     dmChannel.createMessage({embed: {
         color: config.color,
         description: message,
