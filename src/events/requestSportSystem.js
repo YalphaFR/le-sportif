@@ -15,7 +15,7 @@ bot.on("messageCreate", (msg) => {
             name: `${msg.author.username}#${msg.author.discriminator}`,
             icon_url: msg.author.avatarURL,
         },
-        color: utils.getMainRole(msg.member).color,
+        color: msg.member.roles.length > 0 ? utils.getMainRole(msg.member).color : null,
         title: "Proposition d'ajout de sport",
         description: msg.content.toUpperCase(),
         footer: {
@@ -28,10 +28,13 @@ bot.on("messageCreate", (msg) => {
 bot.on("messageReactionAdd", async (msg, emoji, reactor) => {
     if (!msg.channel.id === config.propositionSportChannelID) return;
     if (reactor.id === bot.user.id) return;
+
     const msgReactionUnicode = `${emoji.name}:${emoji.id}`;
     if (msgReactionUnicode !== reactionUnicode) return;
+
     const msgCatched = await msg.channel.getMessage(msg.id);
     if (!msgCatched || msgCatched.author.id !== bot.user.id || msgCatched.embeds.length === 0) return;
+
     const reactions = msgCatched.reactions;
     const limitReactions = reactions[reactionUnicode].me ? 8 : 7;
     if (reactions[reactionUnicode].count < limitReactions) return;
