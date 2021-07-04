@@ -2,13 +2,13 @@ const bot = require("../bot");
 const config = require("../config");
 
 const evaluate = bot.registerCommand("eval", async (msg, args) => {
+    console.log("test");
     let res;
     try {
         res = await eval(args.join(" "));
     } catch (err) {
         res = err.message;
     }
-    console.log("test");
     return msg.channel.createMessage({embed: {
         fields: [
                     {
