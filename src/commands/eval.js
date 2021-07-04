@@ -8,6 +8,7 @@ const evaluate = bot.registerCommand("eval", async (msg, args) => {
     } catch (err) {
         res = err.message;
     }
+    console.log("test");
     return msg.channel.createMessage({embed: {
         fields: [
                     {
