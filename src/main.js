@@ -6,11 +6,12 @@ const bot = require("./bot");
 // COMMANDES
 
 const end = require("./commands/end");
+const newsroulette = require("./commands/newsroulette");
+const eval = require("./commands/eval");
 
 // EVENTS
 
 const requestSportSystem = require("./events/requestSportSystem");
-const newsroulette = require("./commands/newsroulette");
 
 bot.on("ready", () => {
     console.log("Initialisation du statut");
@@ -18,7 +19,7 @@ bot.on("ready", () => {
     console.log("Bot prêt à l'emploi!");
 });
 
-bot.on("disconnect", () => {
+bot.once("disconnect", () => {
     console.log("Bot déconnecté!");
 });
 
