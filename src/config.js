@@ -1,5 +1,5 @@
 const config = {
-    token: `Bot`,
+    token: `Bot ${process.env.token}`,
     status: "online",
     game: {name: "le Tour de France! 🚵‍♂️", type: 3},
     color: 0x90c9e9,
