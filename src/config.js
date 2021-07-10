@@ -3,6 +3,7 @@ const config = {
     status: "online",
     game: {name: "le Tour de France! 🚵‍♂️", type: 3},
     color: 0x90c9e9,
+    ownerID: "322492552601272320",
 
     propositionSportChannelID: "848977391652044810",
     sportQueueChannelLogID: "852971622301696010", 
