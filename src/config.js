@@ -1,7 +1,7 @@
 const config = {
     token: `Bot ${process.env.token}`,
     status: "online",
-    game: {name: "le Tour de France! 🚵‍♂️", type: 3},
+    game: {name: "l'horizon", type: 3},
     color: 0x90c9e9,
     ownerID: "322492552601272320",
 
